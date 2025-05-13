@@ -25,3 +25,15 @@ Believe me!
 - Charge Level Control - [Archwiki](https://wiki.archlinux.org/title/MSI_Modern_15_A5M)
 
 to get the charge level to only 60% for better battery life!
+
+
+### Bash Terminal on Windows
+
+- [Git Bash](https://git-scm.com/downloads/win)
+- to get `sh` bash Termial on windows with Git
+
+
+### Python Snippets
+
+- [PythonSnippets.ipynb](PythonSnippets.ipynb) *a Jupiter Notebook file*
+- some usable python code to copy ;) made by myself!
