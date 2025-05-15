@@ -9,8 +9,6 @@ and information and notes about my setup
 
 ## Software
 
----
-
 ### MSI Dragon Center
 
 MSI Dragon Center is TRASH!
@@ -38,10 +36,9 @@ to get the charge level to only 60% for better battery life!
 
 - [Download](https://github.com/ShadowDara/open-cmd-on-Hotkey/releases/tag/1.1)
 
+---
 
 ## Files
-
----
 
 ### Mouse Trust GX 970
 *The `.bkm` files are profile for my Mouse*
@@ -64,8 +61,6 @@ to get the charge level to only 60% for better battery life!
 ---
 
 ## Software Infos
-
----
 
 ### VS Code History
 
