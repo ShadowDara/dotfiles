@@ -6,10 +6,7 @@ and information and notes about my setup
 *(mostly written for me, but feel free to read it)*
 
 
-### Mouse Trust GX 970
-*The `.bkm` files are profile for my Mouse*
-- Trust GX 970
-- Mouse App: [https://trust.com/23764/downloads](https://trust.com/23764/downloads)
+## Software
 
 
 ### MSI Dragon Center
@@ -33,7 +30,40 @@ to get the charge level to only 60% for better battery life!
 - to get `sh` bash Termial on windows with Git
 
 
+### Open CMD on Hotkey
+
+- [Download](https://github.com/ShadowDara/open-cmd-on-Hotkey/releases/tag/1.1)
+
+
+## Files
+
+
+### Mouse Trust GX 970
+*The `.bkm` files are profile for my Mouse*
+- Trust GX 970
+- Mouse App: [https://trust.com/23764/downloads](https://trust.com/23764/downloads)
+
+
 ### Python Snippets
 
 - [PythonSnippets.ipynb](PythonSnippets.ipynb) *a Jupiter Notebook file*
 - some usable python code to copy ;) made by myself!
+
+
+### VS Code Extensions
+
+- [VS Code Extension File](.vscode/extensions.json)
+
+
+## End
+
+This is the stuff i use, would be cool if discovered some new programms
+through me, would by nice
+
+Please do not copy my file to just republish it
+
+;)
+
+*Shadowdara*
+
+LICENSE: MIT
