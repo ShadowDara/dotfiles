@@ -5,9 +5,11 @@ for backup save and other config files and a lot about my setup
 and information and notes about my setup
 *(mostly written for me, but feel free to read it)*
 
+---
 
 ## Software
 
+---
 
 ### MSI Dragon Center
 
@@ -23,12 +25,14 @@ Believe me!
 
 to get the charge level to only 60% for better battery life!
 
+---
 
 ### Bash Terminal on Windows
 
 - [Git Bash](https://git-scm.com/downloads/win)
 - to get `sh` bash Termial on windows with Git
 
+---
 
 ### Open CMD on Hotkey
 
@@ -37,23 +41,47 @@ to get the charge level to only 60% for better battery life!
 
 ## Files
 
+---
 
 ### Mouse Trust GX 970
 *The `.bkm` files are profile for my Mouse*
 - Trust GX 970
 - Mouse App: [https://trust.com/23764/downloads](https://trust.com/23764/downloads)
 
+---
 
 ### Python Snippets
 
 - [PythonSnippets.ipynb](PythonSnippets.ipynb) *a Jupiter Notebook file*
 - some usable python code to copy ;) made by myself!
 
+---
 
 ### VS Code Extensions
 
 - [VS Code Extension File](.vscode/extensions.json)
 
+---
+
+## Software Infos
+
+---
+
+### VS Code History
+
+VS Code saves a Backup of every ever edited file here!
+
+```path
+C:\Users\shado\AppData\Roaming\Code\User\History
+```
+
+---
+
+## Links
+
+- [Discord Markdown Formatting](https://gist.github.com/matthewzring/9f7bbfd102003963f9be7dbcf7d40e51)
+
+---
 
 ## End
 
@@ -67,3 +95,5 @@ Please do not copy my file to just republish it
 *Shadowdara*
 
 LICENSE: MIT
+
+***Of Course i am not paid for ads, just to be clear for everyone!***
