@@ -1,0 +1,26 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = ShadowDara
+	email = 128976697+ShadowDara@users.noreply.github.com
+[safe]
+	directory = C:/Users/dara/dev/flutter
+	directory = C:/Users/dara/dev/flutter
+	directory = D:/xournalpp
+	directory = D:/xournalpp-1.2.7-windows-portable-x86_64/share/xournalpp/plugins/Xournalpp-Test-Pluigin
+	directory = D:/pluigin-hub
+	directory = D:/xournalpp-1.2.7-windows-portable-x86_64/share/xournalpp/plugins/xournal-pluigin-pluiginhub
+	directory = D:/mkdocs
+	directory = D:/microwave_horrorgame
+	directory = D:/pgkd4r
+	directory = C:/Users/dara/dev/flutter
+	directory = D:/Game-Overview
+	directory = D:/schul-pc-hack
+	directory = D:/KotlinPlugin
+	directory = D:/Productify-Design
+	directory = D:/zug-fahren-tp
+	directory = D:/train-driving
+	directory = D:/scripts
