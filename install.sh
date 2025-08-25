@@ -9,4 +9,7 @@ DOTFILES_DIR=$HOME/dotfiles
 ln -sf $DOTFILES_DIR/.gitconfig $HOME/.gitconfig
 #ln -sf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 
+# htop for Ubuntu
+sudo apt install htop
+
 echo "Dotfiles installiert ✅"

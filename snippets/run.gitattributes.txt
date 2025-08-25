@@ -1,0 +1,4 @@
+# To ignore the file
+
+run.ps1 linguist-ignore
+run.ps1 linguist-vendored
