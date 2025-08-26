@@ -1,0 +1,6 @@
+Replay Mod Video Converter
+
+a simple python script to convert Replay mod export videos
+to videos which my cutting programm accepts
+
+by Shadowdara 2025 MIT License
