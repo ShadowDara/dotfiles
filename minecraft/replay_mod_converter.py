@@ -1,5 +1,6 @@
 # Converter for Minecraft Replay Mod videos
-# By Shadowdara 2025 MIT License
+# By Shadowdara 2025 MIT
+# https://github.com/shadowdara/dotfiles
 
 import tkinter as tk
 from tkinter import filedialog
