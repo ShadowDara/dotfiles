@@ -17,6 +17,8 @@ echo "- Rust"
 echo "- Flatpak"
 echo "- IntelliJ IDEA"
 echo "- PyCharm"
+echo "- Webstorm"
+echo "- OpenSSL"
 
 read
 
@@ -62,19 +64,28 @@ echo "Installing GIMP"
 sudo dnf install gimp
 
 # Rust
-echo "Install Rust"
+echo "Installing Rust"
 sudo dnf install rust cargo
 
 # Flatpak
-echo "Install Flatpak"
+echo "Installing Flatpak"
 sudo dnf install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # PyCharm
-echo "Install PyCharm"
+echo "Installing PyCharm"
 flatpak install flathub com.jetbrains.PyCharm-Community
 
 # Intellij Idea
-echo "Install IntelliJ IDEA"
+echo "Installing IntelliJ IDEA"
 flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community
+
+# WebStorm
+echo "Installing Webstorm"
+flatpak install flathub com.jetbrains.WebStorm
+
+# OpenSSL
+echo "Installing OpenSSL"
+sudo dnf install openssl-devel pkgconfig
+
 
