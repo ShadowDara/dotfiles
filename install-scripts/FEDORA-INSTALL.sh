@@ -12,6 +12,13 @@ echo "- Podman Docker"
 echo "- NixOS"
 echo "- Xournalpp"
 echo "- 7zip"
+echo "- GIMP"
+echo "- Rust"
+echo "- Flatpak"
+echo "- IntelliJ IDEA"
+echo "- PyCharm"
+
+read
 
 # Neovim
 echo "Installing Neovim with Python3 Extension"
@@ -39,7 +46,7 @@ echo "Installing Podman Docker"
 #sudo dnf install podman
 
 # NixOS
-echo "Installing NisOS"#
+echo "Installing NisOS"#0
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
 # Xournalpp
@@ -49,4 +56,25 @@ sudo dnf install xournalpp
 # 7zip
 echo "Installing 7zip"
 sudo dnf install p7zip p7zip-plugins
+
+# GIMP
+echo "Installing GIMP"
+sudo dnf install gimp
+
+# Rust
+echo "Install Rust"
+sudo dnf install rust cargo
+
+# Flatpak
+echo "Install Flatpak"
+sudo dnf install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# PyCharm
+echo "Install PyCharm"
+flatpak install flathub com.jetbrains.PyCharm-Community
+
+# Intellij Idea
+echo "Install IntelliJ IDEA"
+flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community
 
