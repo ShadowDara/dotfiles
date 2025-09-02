@@ -1,4 +1,6 @@
-Replay Mod Video Converter
+# Minecraft Tools
+
+## Replay Mod Video Converter
 
 a simple python script to convert Replay mod export videos
 to videos which my cutting programm accepts
