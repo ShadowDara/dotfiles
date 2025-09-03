@@ -4,6 +4,7 @@
 # written by Shadowdara MIT 2025
 
 echo "Installing:"
+echo "- Python"
 echo "- Neovim"
 echo "- Go"
 echo "- NodeJS"
@@ -21,6 +22,12 @@ echo "- Webstorm"
 echo "- OpenSSL"
 
 read
+
+# Python
+echo "Installing Python"
+sudo dnf install python3
+sudo dnf install python3-pip
+sudo dnf install python3-tkinter
 
 # Neovim
 echo "Installing Neovim with Python3 Extension"

@@ -8,6 +8,17 @@ import subprocess
 import os
 import sys
 
+# Check that correct Python version is running
+
+if not (
+    (sys.version_info[0] == 3 and sys.version_info[1] >= 7)
+    or
+    (sys.version_info[0] > 3)
+):
+    print("\n\n ERROR: Program requires Python 3.7 or newer!")
+    input()
+    exit()
+
 def choose_files():
     filepaths = filedialog.askopenfilenames(
         title="Choose Files",
