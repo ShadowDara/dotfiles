@@ -12,4 +12,7 @@ ln -sf $DOTFILES_DIR/.gitconfig $HOME/.gitconfig
 # htop for Ubuntu
 sudo apt install htop
 
+# Jekyll
+bundle install
+
 echo "Dotfiles installiert ✅"
