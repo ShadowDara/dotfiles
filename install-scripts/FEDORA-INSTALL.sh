@@ -94,5 +94,3 @@ flatpak install flathub com.jetbrains.WebStorm
 # OpenSSL
 echo "Installing OpenSSL"
 sudo dnf install openssl-devel pkgconfig
-
-
