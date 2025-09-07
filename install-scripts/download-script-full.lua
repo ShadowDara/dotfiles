@@ -26,7 +26,7 @@ dapi.download("https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/
 dapi.download("https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/minecraft/paper_to_vanilla_world", "minecraft/paper_to_vanilla_world.py")
 
 -- Download FS-Tools
-dapi_os.run("./download_release.ps1 shadowdara/fs-tools fs-tools.jar")
+dapi_os.run("powershell ./download_release.ps1 shadowdara/fs-tools fs-tools.jar")
 dapi.download("https://raw.githubusercontent.com/ShadowDara/fs-tools/refs/heads/master/winstall.lua", "winstall.lua")
 
 -- Run FS-Tools Installer
@@ -34,8 +34,8 @@ print("[INFO] Running FS-Tools installer... JAVA 21 REQUIRED!")
 dapi_os.run("luajit.exe winstall.lua")
 
 -- ADD TO AUTOSTART
-dapi_os.run("./add_to_autostart.ps1 open_terminal_from_explorer_on_win+t.exe")
-dapi_os.run("./add_to_autostart.ps1 open_wt_from_explorer_on_win+z.exe")
+dapi_os.run("powershell ./add_to_autostart.ps1 open_terminal_from_explorer_on_win+t.exe")
+dapi_os.run("powershell./add_to_autostart.ps1 open_wt_from_explorer_on_win+z.exe")
 
 -- ADD TO PATH
 --dapi_os.run("./setpath.ps1 .")
