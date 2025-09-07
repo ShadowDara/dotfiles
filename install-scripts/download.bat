@@ -18,15 +18,16 @@ echo Fertig! Datei gespeichert als %ZIEL2%
 
 echo Starte Download Script
 
-call ./luajit.exe download-script.lua
+call luajit.exe download-script.lua
 
 echo Updating Dapi
 
-call ./update_luajit.ps1
+call powershell ./update_luajit.ps1
 
 echo Running 2nd part of the script
 
-call ./luajit.exe download-script-full.lua
+call luajit.exe download-script-full.lua
 
 pause
 
+exit /b 0
