@@ -22,6 +22,7 @@ call luajit.exe download-script.lua
 
 echo Updating Dapi
 
+call powershell ./download_release.ps1 shadowdara/LuaAPI-Rust luajit-windows-x86_64.exe
 call powershell ./update_luajit.ps1
 
 echo Running 2nd part of the script
