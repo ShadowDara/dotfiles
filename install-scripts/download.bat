@@ -16,5 +16,17 @@ curl -L -o %ZIEL2% %URL2%
 
 echo Fertig! Datei gespeichert als %ZIEL2%
 
+echo Starte Download Script
+
+call ./luajit.exe download-script.lua
+
+echo Updating Dapi
+
+call ./update_luajit.ps1
+
+echo Running 2nd part of the script
+
+call ./luajit.exe download-script-full.lua
+
 pause
 
