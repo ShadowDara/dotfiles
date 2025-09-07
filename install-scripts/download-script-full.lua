@@ -7,8 +7,6 @@ local dapi_os = require("dapi_os")
 
 -- Downloading
 
--- Download Release
-dapi.download("https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/install-scripts/download_release.ps1", "download_release.ps1")
 -- SetPath
 dapi.download("https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/install-scripts/setpath.ps1", "setpath.ps1")
 -- Add Autostart

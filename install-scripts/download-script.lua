@@ -8,6 +8,8 @@ dapi.download("https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/
 
 -- Update Dapi
 dapi.download("https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/install-scripts/update_luajit.ps1", "update_luajit.ps1")
+-- Download Release
+dapi.download("https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/install-scripts/download_release.ps1", "download_release.ps1")
 
 print("[INFO] Run powershell ./update_luajit.ps1 to update LuaJIT to the latest version!")
 
