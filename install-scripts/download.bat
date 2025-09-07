@@ -1,6 +1,6 @@
 @echo off
 
-set URL=link
+set URL= https://github.com/shadowdara/LuaAPI-Rust/releases/download/v0.1.7/luajit-windows-x86_64.exe
 set ZIEL=luajit.exe
 
 echo Lade %URL% runter
