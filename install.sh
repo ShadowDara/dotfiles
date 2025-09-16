@@ -6,7 +6,7 @@ DOTFILES_DIR=$HOME/dotfiles
 
 # Symbolic Links erstellen
 #ln -sf $DOTFILES_DIR/.zshrc $HOME/.zshrc
-ln -sf $DOTFILES_DIR/.gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES_DIR/configs/.gitconfig $HOME/.gitconfig
 #ln -sf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 
 # htop for Ubuntu
@@ -23,5 +23,19 @@ if ! command -v rustc &> /dev/null; then
 else
   echo "✅ Rust already installed."
 fi
+
+# Powershell install
+# Update & install dependencies
+sudo apt update
+sudo apt install -y wget apt-transport-https software-properties-common
+
+# Microsoft GPG key hinzufügen
+wget -q https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+
+# PowerShell installieren
+sudo apt update
+sudo apt install -y powershell
+
 
 echo "Dotfiles installiert ✅"
