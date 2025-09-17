@@ -1,9 +1,0 @@
-# to ignore them
-py-install linguist-ignore
-py-install linguist-vendored
-
-py-install.bat linguist-ignore
-py-install.bat linguist-vendored
-
-py-install.ps1 linguist-ignore
-py-install.ps1 linguist-vendored

@@ -37,5 +37,8 @@ sudo dpkg -i packages-microsoft-prod.deb
 sudo apt update
 sudo apt install -y powershell
 
+# Download Download Files
+node scripts/download.js
 
-echo "Dotfiles installiert ✅"
+
+echo "Dotfiles installiert"
