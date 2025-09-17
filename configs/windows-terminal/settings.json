@@ -32,11 +32,11 @@
     {
         "defaults": 
         {
-            "backgroundImage": "C:\\Users\\schueler\\Downloads\\b6khq2gmbyo51.jpg",
+            "backgroundImage": "%USERPROFILE%\\Downloads\\b6khq2gmbyo51.jpg",
             "backgroundImageOpacity": 0.39,
             "cursorShape": "underscore",
             "experimental.repositionCursorWithMouse": false,
-            "experimental.retroTerminalEffect": true,
+            "experimental.retroTerminalEffect": false,
             "font": 
             {
                 "size": 11
