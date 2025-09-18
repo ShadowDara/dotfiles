@@ -4,10 +4,10 @@
 # Zielverzeichnis (hier: aktuelles Verzeichnis)
 $basePath = "."  # ggf. anpassen
 
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/LICENSE", -OutFile "$basePath/LICENSE"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/LICENSE" -OutFile "$basePath/LICENSE"
 
 # JarDownloader
-Invoke-WebRequest -Uri "https://github.com/ShadowDara/jar-downloader/releases/download/v0.1.3/videoconverter-0.1.5-SNAPSHOT.jar" -OutFile "$basePath/videoconverter.jar"
+Invoke-WebRequest -Uri "https://github.com/ShadowDara/jar-downloader/releases/download/v0.1.3/jardownloader-0.1.3-SNAPSHOT.jar" -OutFile "$basePath/jardownloader.jar"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/jar-downloader/refs/heads/master/jardownloader.cmd" -OutFile "$basePath/jardownloader.cmd"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/jar-downloader/refs/heads/master/jardownloader" -OutFile "$basePath/jardownloader"
 
