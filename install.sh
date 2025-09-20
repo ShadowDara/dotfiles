@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
+# ***********************************
+# Dotfiles Installations-Skript
+# 
+# ONLY USED FOR CODESPACES!!!
+#
+# by Shadowdara
+# ***********************************
+
 # Dotfiles-Verzeichnis
 DOTFILES_DIR=$HOME/dotfiles
 

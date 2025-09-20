@@ -1,2 +1,7 @@
-/configs/windows-terminal/background_picture.jpg
+# Gitignore File
+
+# Windows Terminal
+/windows-terminal/background_picture.jpg
+
+
 /bin/
