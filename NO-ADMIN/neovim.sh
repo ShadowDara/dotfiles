@@ -11,3 +11,13 @@ chmod u+x nvim.appimage
 
 # Optional: extrahiere AppImage für bessere Integration (nicht notwendig)
 ./nvim.appimage --appimage-extract
+
+# In .bashrc oder .zshrc hinzufügen
+#export PATH="$HOME/apps/nvim:$PATH"
+#alias nvim="$HOME/apps/nvim/nvim.appimage"
+
+# Dann Terminal neu laden
+#source ~/.bashrc
+
+# Config Location
+# ~/.config/nvim/
