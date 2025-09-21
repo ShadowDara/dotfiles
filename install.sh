@@ -14,7 +14,7 @@ DOTFILES_DIR=$HOME/dotfiles
 
 # Symbolic Links erstellen
 #ln -sf $DOTFILES_DIR/.zshrc $HOME/.zshrc
-ln -sf $DOTFILES_DIR/configs/.gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES_DIR/Git/.gitconfig $HOME/.gitconfig
 #ln -sf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 
 # htop for Ubuntu
