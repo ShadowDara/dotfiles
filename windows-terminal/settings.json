@@ -32,7 +32,7 @@
     {
         "defaults": 
         {
-            "backgroundImage": "%USERPROFILE%\\Downloads\\windows_terminal_background_picture.jpg",
+            "backgroundImage": "%USERPROFILE%\\.dara\\windows_terminal_background_picture.jpg",
             "backgroundImageOpacity": 0.39,
             "cursorShape": "underscore",
             "experimental.repositionCursorWithMouse": false,

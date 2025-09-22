@@ -5,11 +5,12 @@
 $basePath = "."  # ggf. anpassen
 
 New-Item -Path "$basePath\\bin" -ItemType Directory
+New-Item -Path "$env:USERPROFILE\\.dara\\psm" -ItemType Directory
 
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/LICENSE" -OutFile "$basePath/bin/LICENSE"
 
 # JarDownloader
-Invoke-WebRequest -Uri "https://github.com/ShadowDara/jar-downloader/releases/download/v0.1.3/jardownloader-0.1.3-SNAPSHOT.jar" -OutFile "$basePath/bin/jardownloader.jar"
+Invoke-WebRequest -Uri "https://github.com/ShadowDara/jar-downloader/releases/download/v0.1.3/jar-downloader-0.1.3-SNAPSHOT.jar" -OutFile "$basePath/bin/jardownloader.jar"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/jar-downloader/refs/heads/master/jardownloader.cmd" -OutFile "$basePath/bin/jardownloader.cmd"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/jar-downloader/refs/heads/master/jardownloader" -OutFile "$basePath/bin/jardownloader"
 
@@ -34,7 +35,7 @@ Invoke-WebRequest -Uri "https://github.com/ShadowDara/open-cmd-on-Hotkey/release
 
 # Release Download Module
 $modulUrl = "https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/scripts/GithubTools.psm1"
-$modulPfad = "./GitHubTools.psm1"
+$modulPfad = "$env:USERPROFILE\\.dara\\psm\\GitHubTools.psm1"
 
 if (-Not (Test-Path $modulPfad)) {
     Invoke-WebRequest -Uri $modulUrl -OutFile $modulPfad
@@ -45,8 +46,11 @@ Import-Module $modulPfad
 # Use Imported Module
 Get-GitHubReleaseAsset -Repo "shadowdara/LuaAPI-Rust" -AssetName "bin\\luajit-windows-x86_64.exe"
 
-New-Item -Path "$env:USERPROFILE\\.dara" -ItemType Directory
-
 Invoke-WebRequest -Uri "https://i.redd.it/b6khq2gmbyo51.jpg" -OutFile "$env:USERPROFILE\\.dara\\windows_terminal_background_picture.jpg"
 
 Copy-Item -Path "$basePath\bin\*" -Destination "$env:USERPROFILE\.dara" -Recurse
+
+# Add to PATH
+$env:Path += ";$env:USERPROFILE\.dara"
+
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/windows-terminal/settings.json" -OutFile "$env:USERPROFILE\\.dara\\settings.json"
