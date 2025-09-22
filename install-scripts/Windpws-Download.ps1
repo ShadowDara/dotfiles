@@ -4,7 +4,7 @@
 # Zielverzeichnis (hier: aktuelles Verzeichnis)
 $basePath = "."  # ggf. anpassen
 
-node download-windows.js
+New-Item -Path "$basePath\\bin" -ItemType Directory
 
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/LICENSE" -OutFile "$basePath/bin/LICENSE"
 
@@ -43,4 +43,10 @@ if (-Not (Test-Path $modulPfad)) {
 Import-Module $modulPfad
 
 # Use Imported Module
-Get-GitHubReleaseAsset -Repo "shadowdara/LuaAPI-Rust" -AssetName "luajit-windows-x86_64.exe"
+Get-GitHubReleaseAsset -Repo "shadowdara/LuaAPI-Rust" -AssetName "bin\\luajit-windows-x86_64.exe"
+
+New-Item -Path "%USERPROFILE%\\.dara" -ItemType Directory
+
+Invoke-WebRequest -Uri "https://i.redd.it/b6khq2gmbyo51.jpg" -OutFile "%USERPROFILE%\\.dara\\windows_terminal_background_picture.jpg"
+
+Copy-Item -Path "$basePath" -Destination "%USERPROFILE%\\.dara\\" -Recurse
