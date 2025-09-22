@@ -37,18 +37,18 @@ int main(int argc, char* argv[])
         // Ordner zur Sicherheit erstellen
         std::filesystem::path dateipfad = argv[1];
 
-        // Verzeichnisse erzeugen, falls nötig
+        // Verzeichnisse erzeugen, falls nÃ¶tig
         try {
             if (dateipfad.has_parent_path()) {
                 std::filesystem::create_directories(dateipfad.parent_path());
             }
         }
         catch (const std::filesystem::filesystem_error& e) {
-            std::cerr << "Fehler beim Erstellen der Verzeichnisse: " << e.what() << "\n";
+            std::cerr << "Error while creating directories: " << e.what() << "\n";
             return 1;
         }
 
-        // Code, der eine Ausnahme werfen könnte
+        // Code, der eine Ausnahme werfen kÃ¶nnte
         std::ofstream datei(argv[1]);
         if (datei.is_open()) {
 
@@ -57,11 +57,12 @@ int main(int argc, char* argv[])
                 datei << argv[2];
             }
             datei.close();
-            std::cout << "Touch Windows - Created File: " << argv[1] << std::endl;
         }
         else {
             std::cerr << "Touch Windows - Error while creating File: " << argv[1] << std::endl;
+            return 1;
         }
+        std::cout << "Touch Windows - Created File: " << argv[1] << std::endl;
     }
     catch (const std::exception& e) {
         // Ausnahmebehandlung
