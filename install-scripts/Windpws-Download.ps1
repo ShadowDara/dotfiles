@@ -45,8 +45,8 @@ Import-Module $modulPfad
 # Use Imported Module
 Get-GitHubReleaseAsset -Repo "shadowdara/LuaAPI-Rust" -AssetName "bin\\luajit-windows-x86_64.exe"
 
-New-Item -Path "%USERPROFILE%\\.dara" -ItemType Directory
+New-Item -Path "$env:USERPROFILE\\.dara" -ItemType Directory
 
-Invoke-WebRequest -Uri "https://i.redd.it/b6khq2gmbyo51.jpg" -OutFile "%USERPROFILE%\\.dara\\windows_terminal_background_picture.jpg"
+Invoke-WebRequest -Uri "https://i.redd.it/b6khq2gmbyo51.jpg" -OutFile "$env:USERPROFILE\\.dara\\windows_terminal_background_picture.jpg"
 
-Copy-Item -Path "$basePath" -Destination "%USERPROFILE%\\.dara\\" -Recurse
+Copy-Item -Path "$basePath\bin\*" -Destination "$env:USERPROFILE\.dara" -Recurse
