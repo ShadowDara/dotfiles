@@ -33,6 +33,9 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ShadowDara/file-mirror
 Invoke-WebRequest -Uri "https://github.com/ShadowDara/dotfiles/releases/download/open-wt-hotkey/open_wt_on_winz.exe" -OutFile "$basePath/bin/open_wt_on_winz.exe"
 Invoke-WebRequest -Uri "https://github.com/ShadowDara/open-cmd-on-Hotkey/releases/download/1.1/open_terminal_from_explorer_on_win+t.exe" -OutFile "$basePath/bin/open_terminal_from_explorer_on_win+t.exe"
 
+# add Touch Windows
+Invoke-WebRequest -Uri "https://github.com/ShadowDara/dotfiles/releases/download/w-touch-0.0.0/touch-windows.exe" -OutFile "$env:USERPROFILE\\.dara\\touch-windows.exe"
+
 # Release Download Module
 $modulUrl = "https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/scripts/GithubTools.psm1"
 $modulPfad = "$env:USERPROFILE\\.dara\\psm\\GitHubTools.psm1"
