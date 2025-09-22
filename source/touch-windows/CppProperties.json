@@ -1,0 +1,29 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "x64-Release",
+      "intelliSenseMode": "windows-msvc-x64",
+      "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.3x.xxxxx/bin/Hostx64/x64/cl.exe",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "includePath": [
+        "${env.INCLUDE}",
+        "${workspaceFolder}/**"
+      ],
+      "defines": [
+        "WIN32",
+        "NDEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerArgs": [
+        "/O2",       // Optimierungen einschalten (speed)
+        "/GL",       // Whole program optimization (Linkzeitoptimierung)
+        "/favor:INTEL64", // CPU-spezifische Optimierung (Intel 64-Bit)
+        "/arch:AVX2" // Befehlssatzoptimierung (je nach CPU anpassen)
+      ],
+      "windowsSdkVersion": "10.0.19041.0"
+    }
+  ]
+}
