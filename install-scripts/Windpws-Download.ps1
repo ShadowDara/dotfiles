@@ -36,6 +36,9 @@ Invoke-WebRequest -Uri "https://github.com/ShadowDara/open-cmd-on-Hotkey/release
 # add Touch Windows
 Invoke-WebRequest -Uri "https://github.com/ShadowDara/dotfiles/releases/download/w-touch-0.0.0/touch-windows.exe" -OutFile "$env:USERPROFILE\\.dara\\touch.exe"
 
+# add Path Viewer Windows
+Invoke-WebRequest -Uri "https://github.com/ShadowDara/Path-Viewer/releases/download/0.0.1/paths.exe" -OutFile "$env:USERPROFILE\\.dara\\paths.exe"
+
 # Release Download Module
 $modulUrl = "https://raw.githubusercontent.com/ShadowDara/dotfiles/refs/heads/main/scripts/GithubTools.psm1"
 $modulPfad = "$env:USERPROFILE\\.dara\\psm\\GitHubTools.psm1"
@@ -47,11 +50,13 @@ if (-Not (Test-Path $modulPfad)) {
 Import-Module $modulPfad
 
 # Use Imported Module
-Get-GitHubReleaseAsset -Repo "shadowdara/LuaAPI-Rust" -AssetName "bin\\luajit-windows-x86_64.exe"
+Get-GitHubReleaseAsset -Repo "shadowdara/LuaAPI-Rust" -AssetName "luajit-windows-x86_64.exe"
 
 Invoke-WebRequest -Uri "https://i.redd.it/b6khq2gmbyo51.jpg" -OutFile "$env:USERPROFILE\\.dara\\windows_terminal_background_picture.jpg"
 
-Copy-Item -Path "$basePath\bin\*" -Destination "$env:USERPROFILE\.dara" -Recurse
+# Move Files
+Move-Item -Path "$basePath\bin\*" -Destination "$env:USERPROFILE\.dara" -Recurse
+Move-Item -Path "$basePath\luajit-windows-x86_64.exe" -Destination "$env:USERPROFILE\.dara\luajit.exe"
 
 # Add to PATH
 $env:Path += ";$env:USERPROFILE\.dara"
