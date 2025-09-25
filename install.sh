@@ -14,7 +14,7 @@ DOTFILES_DIR=$HOME/dotfiles
 
 # Symbolic Links erstellen
 #ln -sf $DOTFILES_DIR/.zshrc $HOME/.zshrc
-ln -sf $DOTFILES_DIR/Git/.gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES_DIR/configs/.gitconfig $HOME/.gitconfig
 #ln -sf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 
 # htop for Ubuntu
@@ -34,19 +34,19 @@ fi
 
 # Powershell install
 # Update & install dependencies
-sudo apt update
-sudo apt install -y wget apt-transport-https software-properties-common
+# sudo apt update
+# sudo apt install -y wget apt-transport-https software-properties-common
 
-# Microsoft GPG key hinzufügen
-wget -q https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
+# # Microsoft GPG key hinzufügen
+# wget -q https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
+# sudo dpkg -i packages-microsoft-prod.deb
 
-# PowerShell installieren
-sudo apt update
-sudo apt install -y powershell
+# # PowerShell installieren
+# sudo apt update
+# sudo apt install -y powershell
 
 # Download Download Files
-node scripts/download.js
+# node scripts/download.js
 
 
 echo "Dotfiles installiert"
