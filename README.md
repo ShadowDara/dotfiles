@@ -6,7 +6,6 @@ chmod +x install.sh
 ```
 
 ## Templates
-- Zig Built Setup with C++ and C for Zig 0.14
 - Godot Save Template
 - Tauri Config File Template
 - Tauri Website app Template
@@ -14,6 +13,7 @@ chmod +x install.sh
 ## My Repo Changes and Stuff
 
 ### 26.09.2025
+- Moved Zig built Template to [Zig-Build-Setup](https://github.com/ShadowDara/Zig-Build-Setup)
 - Deleted Godot Save template and moved it here
 - Moved Tauri Config File Template here
 - Moved Tauri Website App here
