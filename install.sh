@@ -49,4 +49,4 @@ fi
 # node scripts/download.js
 
 
-echo "Dotfiles installiert"
+echo "Dotfiles installed!"
