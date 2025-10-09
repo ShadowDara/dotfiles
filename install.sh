@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/sh
+
 set -e
+set -euxo pipefail
 
 # ***********************************
 # Dotfiles Installations-Skript
@@ -17,10 +19,14 @@ DOTFILES_DIR=$HOME/dotfiles
 ln -sf $DOTFILES_DIR/configs/.gitconfig $HOME/.gitconfig
 #ln -sf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 
+sudo apt update
+
 # htop for Ubuntu
 sudo apt install htop
 
 # Jekyll
+sudo apt install -y ruby-full build-essential zlib1g-dev
+gem install bundler
 bundle install
 
 # Rust installieren (offizieller Installer)
@@ -29,7 +35,7 @@ if ! command -v rustc &> /dev/null; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   source $HOME/.cargo/env
 else
-  echo "✅ Rust already installed."
+  echo "Rust already installed."
 fi
 
 # Powershell install
