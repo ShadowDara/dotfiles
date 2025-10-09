@@ -1,58 +1,40 @@
-#!/bin/sh
-
-set -e
+#!/usr/bin/env bash
 set -euxo pipefail
 
 # ***********************************
 # Dotfiles Installations-Skript
-# 
-# ONLY USED FOR CODESPACES!!!
-#
+# NUR FÜR CODESPACES!!!
 # by Shadowdara
 # ***********************************
 
-# Dotfiles-Verzeichnis
-DOTFILES_DIR=$HOME/dotfiles
+# Dotfiles-Verzeichnis (anpassen!)
+DOTFILES_DIR=$HOME/.dotfiles
 
 # Symbolic Links erstellen
-#ln -sf $DOTFILES_DIR/.zshrc $HOME/.zshrc
 ln -sf $DOTFILES_DIR/configs/.gitconfig $HOME/.gitconfig
-#ln -sf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 
+# htop installieren
 sudo apt update
+sudo apt install -y htop
 
-# htop for Ubuntu
-sudo apt install htop
+# Ruby & Bundler prüfen
+if ! command -v bundle &> /dev/null; then
+  sudo apt install -y ruby-full build-essential zlib1g-dev
+  gem install bundler
+fi
 
-# Jekyll
-sudo apt install -y ruby-full build-essential zlib1g-dev
-gem install bundler
-bundle install
+# Jekyll dependencies
+bundle install || echo "bundle install failed or not needed"
 
-# Rust installieren (offizieller Installer)
+# Rust installieren
 if ! command -v rustc &> /dev/null; then
   echo "🔧 Installing Rust..."
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-  source $HOME/.cargo/env
+  source "$HOME/.cargo/env"
 else
   echo "Rust already installed."
 fi
 
-# Powershell install
-# Update & install dependencies
-# sudo apt update
-# sudo apt install -y wget apt-transport-https software-properties-common
+source ~/.bashrc
 
-# # Microsoft GPG key hinzufügen
-# wget -q https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
-# sudo dpkg -i packages-microsoft-prod.deb
-
-# # PowerShell installieren
-# sudo apt update
-# sudo apt install -y powershell
-
-# Download Download Files
-# node scripts/download.js
-
-
-echo "Dotfiles installed!"
+echo "Dotfiles setup completed!"
