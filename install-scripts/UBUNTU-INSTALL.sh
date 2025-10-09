@@ -1,10 +1,16 @@
 #!/bin/bash
 
+# Ubuntu 20.04.6 LTS
+
+sudo add-apt-repository universe
+
 echo "Updating package lists..."
 sudo apt update
 
 echo "Installing packages..."
-sudo apt install -y git nodejs npm build-essential pkg-config libssl-dev python3-pip wget neovim
+sudo apt install -y git nodejs npm build-essential pkg-config libssl-dev python3-pip wget neovim gnome-tweaks
+
+gnome-extensions disable ubuntu-dock@ubuntu.com
 
 # Rust installation check
 if ! command -v rustc >/dev/null 2>&1; then
@@ -34,3 +40,9 @@ echo '. "$HOME/.cargo/env"'
 echo 'export PATH="$PATH:$HOME/.local/bin"'
 
 echo "You can run 'source ~/.bashrc' or restart your terminal to apply changes."
+
+echo "\nStart Gnome Tweaks with"
+echo "gnome-tweaks"
+
+echo "Enable Doc back:"
+echo "gnome-extensions enable ubuntu-dock@ubuntu.com"
