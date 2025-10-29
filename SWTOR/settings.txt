@@ -13,6 +13,7 @@ SPIEL
 	Benutzeroberfläche:
 		Gespräch:
 			[X] Untertitel bei Gesprächen anzeigen
+			[X] Dialog-Aurichtstungsgewin anzeigen
 
 	Grafik:
 		Vollbild (Fenstermodus)
