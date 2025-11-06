@@ -35,6 +35,9 @@ else
   echo "Rust already installed."
 fi
 
+# Install Bun
+curl -fsSL https://bun.sh/install | bash
+
 source ~/.bashrc
 
 echo "Dotfiles setup completed!"
