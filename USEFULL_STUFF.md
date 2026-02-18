@@ -34,3 +34,14 @@ Zed
 ```sh
 winget install -e --id ZedIndustries.Zed
 ```
+
+### Change Drive Infos
+
+`autorun.inf` File
+
+```properties
+# To change Infos about a Windows Dir
+[autorun]
+icon=Dara.ico
+label="270GB NTFS"
+```
