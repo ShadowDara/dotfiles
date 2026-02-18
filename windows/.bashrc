@@ -1,0 +1,3 @@
+# Bashrc File
+
+fastfetch
