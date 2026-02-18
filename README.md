@@ -7,3 +7,7 @@ chmod +x install.sh
 
 ## Linux Infos
 - show hidden files in the File Explorer `CRTL + H`
+
+## Info
+
+the `.bkm` files are binary files for my Mouse

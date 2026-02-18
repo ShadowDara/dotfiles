@@ -1,0 +1,28 @@
+SWTOR Settings
+
+CHANGES:
+
+SPIEL
+	Steuerung:
+		[X] Automatisches Plündern bei Rechtsclick
+		[X] Ziel per Mausclick aufs Gelände abwählen
+	
+		Maximale Kamera Entfernung: 100%
+		Kameraschwenk-Geswindichkeit: 10%
+
+	Benutzeroberfläche:
+		Gespräch:
+			[X] Untertitel bei Gesprächen anzeigen
+			[X] Dialog-Aurichtstungsgewin anzeigen
+
+	Grafik:
+		Vollbild (Fenstermodus)
+
+Tastenbelegung
+	Schnellleiste
+		Slot 4 (Q)
+		Slot 5 (W)
+		Slot 6 (E)
+		Slot 7 (D)
+		Slot 8 (A)
+		Slot 9 (S)
