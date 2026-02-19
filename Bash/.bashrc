@@ -78,10 +78,10 @@ esac
 # Windows check (Git Bash / MINGW)
 if [[ $PLATFORM == "Windows" ]]; then
     # Make Windows Specific Path Stuff here
-    # echo Hallo Windows
+    echo Hallo Windows
 elif [[ $PLATFORM == "Linux" ]]; then
     # Linux Specific Stuff
-    # echo Hallo Linux
+    echo Hallo Linux
 fi
 
 
@@ -100,7 +100,7 @@ fi
 if [[ "$fastfetchlogo" == "true" ]]; then
     # Start Fastfetch to print system Infos
     fastfetch
-else then
+else
     # Start Fastfetch to print system Infos but without a logo
     # because of smaller screens
     fastfetch --logo none
