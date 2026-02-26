@@ -9,6 +9,7 @@
 # Set false on Termux
 fastfetchlogo=true
 
+
 # Git Prompt nur laden wenn vorhanden
 #
 # To disable a Git Bash Error Message on Windows
@@ -64,6 +65,12 @@ my_update() {
 }
 
 
+# Function to clear the screens
+cls() {
+    clear
+}
+
+
 # OS Detection
 OS="$(uname)"
 
@@ -92,10 +99,12 @@ esac
 # Windows check (Git Bash / MINGW)
 if [[ $PLATFORM == "Windows" ]]; then
     # Make Windows Specific Path Stuff here
-    echo Hallo Windows
+    # echo Hallo Windows
+    echo
 elif [[ $PLATFORM == "Linux" ]]; then
     # Linux Specific Stuff
-    echo Hallo Linux
+    # echo Hallo Linux
+    echo
 fi
 
 
@@ -119,6 +128,11 @@ else
     # because of smaller screens
     fastfetch --logo none
 fi
+
+
+# Modify the Path Variables
+# $PATH = $PATH + ":C:\Users\schueler\Documents\PowerShell"
+
 
 echo System Name:
 uname

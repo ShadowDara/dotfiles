@@ -33,3 +33,9 @@ function cls {
 function path {
 	Start-Process "$env:USERPROFILE\Documents\Programms\path-viewer_x64.exe"
 }
+
+# To use bash
+
+Clear-Host
+
+bash
