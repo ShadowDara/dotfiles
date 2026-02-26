@@ -9,6 +9,20 @@
 # Set false on Termux
 fastfetchlogo=true
 
+# Git Prompt nur laden wenn vorhanden
+#
+# To disable a Git Bash Error Message on Windows
+#
+if [ -f /etc/profile.d/git-prompt.sh ]; then
+    . /etc/profile.d/git-prompt.sh
+fi
+
+if type __git_ps1 &>/dev/null; then
+    PS1='\[\e[32m\]\u@\h \[\e[35m\]\W$(__git_ps1 " (%s)")\[\e[0m\]\$ '
+else
+    PS1='\u@\h \W\$ '
+fi
+
 
 # Function to install everything
 my_setup_termux() {
