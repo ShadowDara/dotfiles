@@ -54,6 +54,12 @@ my_setup_termux() {
 }
 
 
+# POPOS
+my_setup_popos() {
+    sudo apt install golang-go
+}
+
+
 # Function to update my own Programms and although other
 # Stuff
 my_update() {
