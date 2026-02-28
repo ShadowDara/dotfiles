@@ -57,6 +57,9 @@ my_setup_termux() {
 # POPOS
 my_setup_popos() {
     sudo apt install golang-go
+    sudo apt install htop
+    sudo apt install build-essential
+    sudo apt install cmake
 }
 
 
