@@ -3,9 +3,11 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [user]
 	name = ShadowDara
 	email = shadowdara74@gmail.com
+
 [safe]
 	directory = C:/Users/dara/dev/flutter
 	directory = C:/Users/dara/dev/flutter
@@ -24,3 +26,12 @@
 	directory = D:/zug-fahren-tp
 	directory = D:/train-driving
 	directory = D:/scripts
+
+[credential "helperselector"]
+	selected = manager
+
+[credential "http://192.168.178.68:3000"]
+	provider = generic
+
+[credential "http://fedora.fritz.box:3000"]
+	provider = generic
