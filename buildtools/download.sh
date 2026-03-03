@@ -8,3 +8,4 @@ git clone https://github.com/ShadowDara/Path-Viewer
 git clone https://github.com/ShadowDara/linksaver
 git clone https://github.com/ShadowDara/tools
 git clone https://github.com/ShadowDara/script-creator
+git clone https://github.com/ShadowDara/filesplitter
