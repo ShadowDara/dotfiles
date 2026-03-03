@@ -7,3 +7,11 @@
 /bin/
 
 *.exe
+
+# In the Buildtools Folder
+buildtools/GitIgnore-Adder/
+buildtools/Path-Viewer/
+buildtools/linksaver/
+buildtools/script-creator/
+buildtools/sx/
+buildtools/tools/
