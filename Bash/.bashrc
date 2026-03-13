@@ -49,6 +49,9 @@ my_setup_termux() {
     # Update existing packages
     pkg upgrade
 
+    # Setup the Storage
+    termux-setup-storage
+
     # Reload the File
     source ~/.bashrc
 }
