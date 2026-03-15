@@ -1,4 +1,16 @@
 @echo off
+
+cls
+
+title Term
+
+rem Enable ANSI
+rem reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1 /f
+
+rem Load the File Automatily
+rem But do not do this
+rem reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "C:\Users\schueler\Downloads\dotfiles\Batch\profile.bat" /f
+
 chcp 65001 >nul
 
 rem bessere Variablenverarbeitung
@@ -36,11 +48,9 @@ rem set "PATH=%PATH%;C:\Tools\bin"
 rem Bigger History
 doskey /listsize=1000
 
-rem Load the File Automatily
-rem reg add HKCU\Software\Microsoft\Command Processor /v AutoRun /d "C:\cmd_profile.bat" /f
-
 fastfetch
 
-echo CMD Profil geladen.
+echo loaded CMD Profile.
 
-cmd /k
+rem This would create a loop
+rem cmk /k

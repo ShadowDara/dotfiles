@@ -1,3 +1,5 @@
+rem Add a new entry to the User Path
+
 @echo off
 
 if "%~1"=="" (
