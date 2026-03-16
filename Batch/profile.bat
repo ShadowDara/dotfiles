@@ -2,7 +2,7 @@
 
 cls
 
-title Term
+title HACK
 
 rem Enable ANSI
 rem reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1 /f
