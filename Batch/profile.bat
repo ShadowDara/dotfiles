@@ -42,6 +42,8 @@ rem Schneller Ordner Wechsel
 doskey desk=cd %USERPROFILE%\Desktop
 doskey dl=cd %USERPROFILE%\Downloads
 
+doskey ep=explorer .
+
 rem häufige Tools in PATH (optional)
 rem set "PATH=%PATH%;C:\Tools\bin"
 

@@ -54,8 +54,8 @@ rem for /f "delims=" %%a in ('sx.exe --windows-foldertool-batch-f6-name') do set
 rem for /f "delims=" %%a in ('sx.exe --windows-foldertool-batch-f7-name') do set FOL7NAME=%%a
 
 :MENU
-echo Folder Switcher
-echo 0) Exit					11) %FOL11NAME%
+echo Easy Folder Switcher
+echo 0) Exit					                11) %FOL11NAME%
 echo 1) %FOL1NAME%				12) %FOL12NAME%
 echo 2) %FOL2NAME%				13) %FOL13NAME%
 echo 3) %FOL3NAME%				14) %FOL14NAME%
@@ -65,8 +65,8 @@ echo 6) %FOL6NAME%				17) %FOL17NAME%
 echo 7) %FOL7NAME%				18) %FOL18NAME%
 echo 8) %FOL8NAME%				19) %FOL19NAME%
 echo 9) %FOL9NAME%				20) %FOL20NAME%
-echo 10) %FOL10NAME%     			21) %FOL21NAME%
-set /p choice=Your Choice ===^> 
+echo 10) %FOL10NAME%                              21) %FOL21NAME%
+set /p choice=Your Choice ===^>
 
 rem for /f "delims=" %%a in ('sx.exe --windows-foldertool-batch-f4') do set FOL4=%%a
 rem for /f "delims=" %%a in ('sx.exe --windows-foldertool-batch-f5') do set FOL5=%%a
