@@ -1,0 +1,100 @@
+{
+  "appidentifier": "de.shadowdara.applauncher",
+  "appversion": "0.1.1",
+  "pretty": true,
+  "next_id": 10000027,
+  "entries": [
+    {
+      "id": 10000000,
+      "title": "WinDirStat",
+      "description": "My Gamee",
+      "last_played": 1771784915180,
+      "icon_path": "",
+      "banner_path": "",
+      "lib_pic_path": "",
+      "start_command": "C:/Users/schueler/Downloads/WinDirStat.exe",
+      "checksum": "",
+      "playtime": null
+    },
+    {
+      "id": 10000001,
+      "title": "Minecraft",
+      "description": "My Game",
+      "last_played": 1767233043943,
+      "icon_path": "C:/Users/schueler/Downloads/Minecraft_2024_cover_art.png",
+      "banner_path": "C:/Users/schueler/Downloads/Minecraft_2024_cover_art.png",
+      "lib_pic_path": "C:/Users/schueler/Downloads/Minecraft_2024_cover_art.png",
+      "start_command": "",
+      "checksum": "",
+      "playtime": null
+    },
+    {
+      "id": 10000002,
+      "title": "Sublime Text",
+      "description": "My Game",
+      "last_played": 1767233727530,
+      "icon_path": "",
+      "banner_path": "",
+      "lib_pic_path": "",
+      "start_command": "C:/Users/schueler/Downloads/sublime_text_build_4200_x64/sublime_text.exe",
+      "checksum": "",
+      "playtime": null
+    },
+    {
+      "id": 10000008,
+      "title": "Godot C# Version",
+      "description": "My Game",
+      "last_played": 1770362773680,
+      "icon_path": "",
+      "banner_path": "",
+      "lib_pic_path": "",
+      "start_command": "C:/Users/schueler/Downloads/Godot_v4.5.1-stable_mono_win64/Godot_v4.5.1-stable_mono_win64.exe",
+      "checksum": "",
+      "playtime": null
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Games",
+      "description": "Alle Spiele",
+      "entrys": [
+        10000000,
+        10000001,
+        10000017
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Tools",
+      "description": "Programme & Tools",
+      "entrys": [
+        10000002,
+        10000008
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Zuletzt gespielt",
+      "description": "Kürzlich gestartete Einträge",
+      "entrys": [
+        10000008,
+        10000000
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Unbenutzt",
+      "description": "Noch nie gestartet",
+      "entrys": [
+        10000017
+      ]
+    },
+    {
+      "id": 5,
+      "title": "LOLLIwewe",
+      "description": "sff",
+      "entrys": []
+    }
+  ]
+}
