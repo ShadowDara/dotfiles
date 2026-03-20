@@ -59,7 +59,7 @@ do
     1) windows; break ;;
     2) linux; break ;;
     3) windowspush; break ;;
-    3) linupush; break ;;
-    *) echo "Ungültig"; break ;;
+    4) linupush; break ;;
+    *) echo "Wrong decision"; break ;;
   esac
 done
