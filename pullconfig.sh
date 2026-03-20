@@ -14,6 +14,15 @@ windows() {
 	cp ~/AppData/Roaming/applaunscher/applaunscher.library.json Applaunscher
 }
 
+# Windows Push Stuff
+windowspush() {
+    echo Push Config on Windows
+
+    # Push SX
+    cp SX/sx.conf ~
+	cp SX/sx-message.txt ~
+}
+
 # Linux Pull Stuff
 linux() {
 	echo Pulling on Linux
@@ -23,6 +32,19 @@ linux() {
 	# Using via System Links
     rm -rf ~/.config/nvim
     ln -s ~/dotfiles/nvim ~/.config/nvim
+
+    # Pull SX
+    cp ~/sx.conf SX
+	cp ~/sx-message.txt SX
+}
+
+# Linux Push Stuff
+linuxpush() {
+    echo Push Config on Linux
+
+    # Push SX
+    cp SX/sx.conf ~
+	cp SX/sx-message.txt ~
 }
 
 funktion3() {
@@ -31,12 +53,13 @@ funktion3() {
 
 PS3="Bitte wähle eine Option: "
 
-select option in "Windows" "Linux" "Funktion 3"
+select option in "Windows" "Linux" "Push Windows" "Push Linux"
 do
   case $REPLY in
     1) windows; break ;;
     2) linux; break ;;
-    3) funktion3 ;;
+    3) windowspush; break ;;
+    3) linupush; break ;;
     *) echo "Ungültig"; break ;;
   esac
 done
