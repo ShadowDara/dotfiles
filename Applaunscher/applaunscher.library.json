@@ -2,7 +2,7 @@
   "appidentifier": "de.shadowdara.applauncher",
   "appversion": "0.1.1",
   "pretty": true,
-  "next_id": 10000027,
+  "next_id": 10000028,
   "entries": [
     {
       "id": 10000000,
@@ -13,6 +13,7 @@
       "banner_path": "",
       "lib_pic_path": "",
       "start_command": "C:/Users/schueler/Downloads/WinDirStat.exe",
+      "start_args2": [],
       "checksum": "",
       "playtime": null
     },
@@ -25,6 +26,7 @@
       "banner_path": "C:/Users/schueler/Downloads/Minecraft_2024_cover_art.png",
       "lib_pic_path": "C:/Users/schueler/Downloads/Minecraft_2024_cover_art.png",
       "start_command": "",
+      "start_args2": [],
       "checksum": "",
       "playtime": null
     },
@@ -37,6 +39,7 @@
       "banner_path": "",
       "lib_pic_path": "",
       "start_command": "C:/Users/schueler/Downloads/sublime_text_build_4200_x64/sublime_text.exe",
+      "start_args2": [],
       "checksum": "",
       "playtime": null
     },
@@ -49,6 +52,20 @@
       "banner_path": "",
       "lib_pic_path": "",
       "start_command": "C:/Users/schueler/Downloads/Godot_v4.5.1-stable_mono_win64/Godot_v4.5.1-stable_mono_win64.exe",
+      "start_args2": [],
+      "checksum": "",
+      "playtime": null
+    },
+    {
+      "id": 10000027,
+      "title": "WinSCP",
+      "description": "My Game",
+      "last_played": 1774201600306,
+      "icon_path": "",
+      "banner_path": "",
+      "lib_pic_path": "",
+      "start_command": "C:/Users/schueler/AppData/Local/Programs/WinSCP/WinSCP.exe",
+      "start_args2": [],
       "checksum": "",
       "playtime": null
     }
