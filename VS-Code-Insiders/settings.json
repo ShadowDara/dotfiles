@@ -1,0 +1,46 @@
+{
+    "python.defaultInterpreterPath": "c:\\Users\\schueler\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "workbench.sideBar.location": "right",
+    "workbench.editor.empty.hint": "hidden",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "zig.zls.enabled": "on",
+    "editor.wordWrap": "on",
+    "redhat.telemetry.enabled": true,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "remote.SSH.remotePlatform": {
+        "fedora": "linux",
+        "192.168.178.196": "linux"
+    },
+    "makefile.configureOnOpen": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "rust": false,
+        "typescript": false
+    },
+    "debug.onTaskErrors": "showErrors",
+    "C_Cpp.default.compilerPath": "c:\\Users\\schueler\\Downloads\\tcc\\tcc.exe",
+    "files.associations": {
+        "*.json5": "jsonc"
+    },
+    "svelte.enable-ts-plugin": true,
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.confirmSync": false,
+    "chat.tools.terminal.outputLocation": "chat",
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": true
+    },
+    "git.replaceTagsWhenPull": true,
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true
+    },
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1"
+}
