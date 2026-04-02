@@ -1,7 +1,9 @@
 @echo off
 
+rem Clear the Screen
 cls
 
+rem Just for fun lol
 title HACK
 
 rem Enable ANSI
@@ -11,6 +13,7 @@ rem Load the File Automatily
 rem But do not do this
 rem reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "C:\Users\schueler\Downloads\dotfiles\Batch\profile.bat" /f
 
+rem set the encoding to utf-8
 chcp 65001 >nul
 
 rem bessere Variablenverarbeitung
@@ -53,6 +56,10 @@ doskey /listsize=1000
 fastfetch
 
 echo loaded CMD Profile.
+
+for %%i in ("%~dp0..\Birthday\app.ts") do set APP=%%~fi
+bun "%APP%" week
+doskey birth=bun %APP% $*
 
 rem This would create a loop
 rem cmk /k
