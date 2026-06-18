@@ -57,9 +57,8 @@ fastfetch
 
 echo loaded CMD Profile.
 
-for %%i in ("%~dp0..\Birthday\app.ts") do set APP=%%~fi
-bun "%APP%" week
-doskey birth=bun %APP% $*
+samtool -b week --path "C:\Users\schueler\Downloads\dotfiles\Secret2\birthdays.json"
+doskey birth=samtool -b week --path "C:\Users\schueler\Downloads\dotfiles\Secret2\birthdays.json"
 
 rem This would create a loop
 rem cmk /k
