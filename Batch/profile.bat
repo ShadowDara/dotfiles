@@ -57,8 +57,8 @@ fastfetch
 
 echo loaded CMD Profile.
 
-samtool -b week --path "C:\Users\schueler\Downloads\dotfiles\Secret2\birthdays.json"
-doskey birth=samtool -b week --path "C:\Users\schueler\Downloads\dotfiles\Secret2\birthdays.json"
+@REM samtool -b week --path "C:\Users\schueler\Downloads\dotfiles\Secret2\birthdays.json"
+@REM doskey birth=samtool -b week --path "C:\Users\schueler\Downloads\dotfiles\Secret2\birthdays.json"
 
 rem This would create a loop
 rem cmk /k
