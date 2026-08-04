@@ -28,9 +28,22 @@ require("lazy").setup({
 
   -- Syntax Highlighting
   {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-  },
+  "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate",
+  config = function()
+    require("nvim-treesitter.config").setup({
+      ensure_installed = {
+        "cpp",
+        "c",
+        "lua",
+        "bash",
+      },
+      highlight = {
+        enable = true,
+      },
+    })
+  end,
+},
 
   -- Tabs oben (geöffnete Dateien)
   {
@@ -72,3 +85,14 @@ require("lazy").setup({
   },
 
 })
+
+
+-- Bufferline
+vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>")
+
+for i = 1, 9 do
+  vim.keymap.set("n", "<leader>" .. i,
+    "<Cmd>BufferLineGoToBuffer " .. i .. "<CR>")
+end
+
