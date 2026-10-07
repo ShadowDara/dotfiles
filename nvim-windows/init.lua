@@ -215,7 +215,7 @@ require("lazy").setup({
 		  
 		  lualine_x = {
             function()
-              return os.date("%d.%m.%Y  %H:%M")
+              return os.date("%d.%m.%Y  %H:%M:%S")
             end,
           },
         },
@@ -250,7 +250,27 @@ require("lazy").setup({
         },
       }
     end,
-  }
+  },
+  
+  
+  -- --------------------------------------------
+  -- Commenting
+  -- --------------------------------------------
+
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+
+      -- Visual Mode: Ctrl + #
+      vim.keymap.set(
+        "x",
+        "<C-_>",
+        "gc",
+        { remap = true, desc = "Toggle Comment" }
+      )
+    end,
+  },
 
 
 })
