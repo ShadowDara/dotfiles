@@ -91,12 +91,12 @@ require("lazy").setup({
   --
   
   {
-  "folke/tokyonight.nvim",
-  priority = 1000,
-  config = function()
-    vim.cmd.colorscheme("tokyonight")
-  end,
-},
+    "folke/tokyonight.nvim",
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme("tokyonight")
+    end,
+  },
 
 
   -- --------------------------------------------
@@ -211,6 +211,12 @@ require("lazy").setup({
         sections = {
           lualine_c = {
             "filename",
+          },
+		  
+		  lualine_x = {
+            function()
+              return os.date("%d.%m.%Y  %H:%M")
+            end,
           },
         },
       })
