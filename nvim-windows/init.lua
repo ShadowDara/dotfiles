@@ -5,6 +5,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.opt.clipboard = "unnamedplus"
 
 -- ============================================
 -- Lazy.nvim
@@ -83,6 +84,19 @@ require("lazy").setup({
       vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
     end,
   },
+  
+  
+  --
+  -- Colors Sheme
+  --
+  
+  {
+  "folke/tokyonight.nvim",
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme("tokyonight")
+  end,
+},
 
 
   -- --------------------------------------------
@@ -90,34 +104,31 @@ require("lazy").setup({
   -- --------------------------------------------
 
   {
-    "nvim-treesitter/nvim-treesitter",
+  "nvim-treesitter/nvim-treesitter",
+  branch = "main",
+  build = ":TSUpdate",
 
-    build = ":TSUpdate",
+  config = function()
+    require("nvim-treesitter").install({
+      "c",
+      "cpp",
+      "lua",
+      "bash",
+      "vim",
+      "vimdoc",
+      "query",
+      "rust",
+    })
 
-    config = function()
-      require("nvim-treesitter.config").setup({
-        ensure_installed = {
-          "c",
-          "cpp",
-          "lua",
-          "bash",
-          "vim",
-          "vimdoc",
-          "query",
-        },
-
-        highlight = {
-          enable = true,
-        },
-
-        indent = {
-          enable = true,
-        },
-      })
-    end,
-  },
-
-
+    vim.api.nvim_create_autocmd("FileType", {
+      callback = function(args)
+        vim.treesitter.start(args.buf)
+      end,
+    })
+  end,
+},	
+  
+  
   -- --------------------------------------------
   -- Icons
   -- --------------------------------------------
@@ -205,6 +216,36 @@ require("lazy").setup({
       })
     end,
   },
+  
+  
+  -- --------------------------------------------
+  -- Rust / rust-analyzer
+  -- --------------------------------------------
+
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^6",
+    lazy = false,
+
+    init = function()
+      vim.g.rustaceanvim = {
+        server = {
+          default_settings = {
+            ["rust-analyzer"] = {
+              cargo = {
+                allFeatures = true,
+              },
+
+              check = {
+                command = "clippy",
+              },
+            },
+          },
+        },
+      }
+    end,
+  }
+
 
 })
 
@@ -237,14 +278,4 @@ for i = 1, 9 do
     { desc = "Go to Buffer " .. i }
   )
 end
-
--- 
--- RUST LSP
---
-
-vim.lsp.config("rust_analyzer", {
-    cmd = { "rust-analyzer" },
-})
-
-vim.lsp.enable("rust_analyzer")
 
