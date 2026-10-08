@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+      "description": "",
+      "image": "",
+      "name": "WindirStat",
+      "script": "scripts/WindirStat.bat"
+    },
+    {
+      "description": "",
+      "image": "",
+      "name": "Godot",
+      "script": "scripts/Godot.bat"
+    },
+    {
+      "description": "",
+      "image": "",
+      "name": "cache Viewer",
+      "script": "scripts/cache_Viewer.bat"
+    }
+  ]
+}
