@@ -61,6 +61,33 @@ require("lazy").setup({
 
   "nvim-lua/plenary.nvim",
 
+  
+  -- ============================================
+  -- Battery Status
+  -- ============================================
+
+  {
+    "justinhj/battery.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+      update_rate_seconds = 60,
+
+      -- Auf Desktop-PCs nichts anzeigen
+      show_status_when_no_battery = false,
+
+      -- Akku-Symbol + Prozent
+      show_percent = true,
+
+      -- Kabel-Symbol
+      show_plugged_icon = true,
+      show_unplugged_icon = false,
+
+      vertical_icons = false,
+    },
+  },
+
 
   -- --------------------------------------------
   -- Telescope
@@ -122,7 +149,10 @@ require("lazy").setup({
 
     vim.api.nvim_create_autocmd("FileType", {
       callback = function(args)
-        vim.treesitter.start(args.buf)
+        local ok = pcall(vim.treesitter.start, args.buf)
+        if not ok then
+          return
+        end
       end,
     })
   end,
@@ -217,7 +247,13 @@ require("lazy").setup({
             function()
               return os.date("%d.%m.%Y  %H:%M:%S")
             end,
+			
+			function()
+			  local battery = require("battery")
+			  return battery.get_status_line()
+			end,
           },
+
         },
       })
     end,
@@ -358,6 +394,36 @@ require("lazy").setup({
   "onsails/lspkind.nvim",
 },
 
+
+-- =============================================
+-- } nach { automatisch setzen
+-- =============================================
+
+{
+  "windwp/nvim-autopairs",
+  event = "InsertEnter",
+  config = function()
+    require("nvim-autopairs").setup({})
+  end,
+},
+
+{
+    "neovim/nvim-lspconfig",
+    config = function()
+      vim.lsp.enable("clangd") -- Neovim 0.11+
+    end,
+  },
+
+  {
+    "michaelrommel/nvim-silicon",
+    cmd = "Silicon",
+    opts = {
+      theme = "Dracula",
+      to_clipboard = true,
+      wslclipboard = true,
+    },
+  },
+
 })
 
 
@@ -389,4 +455,16 @@ for i = 1, 9 do
     { desc = "Go to Buffer " .. i }
   )
 end
+
+
+-- ============================================
+--
+-- ============================================
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.rs",
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+  end,
+})
 
