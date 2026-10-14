@@ -424,6 +424,38 @@ require("lazy").setup({
     },
   },
 
+-- --------------------------------------------
+  -- TODO Comments
+  -- --------------------------------------------
+
+  {
+    "folke/todo-comments.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("todo-comments").setup({})
+
+      vim.keymap.set("n", "]t", function()
+        require("todo-comments").jump_next()
+      end, { desc = "Nächstes TODO" })
+
+      vim.keymap.set("n", "[t", function()
+        require("todo-comments").jump_prev()
+      end, { desc = "Vorheriges TODO" })
+
+      vim.keymap.set("n", "<leader>xt", "<cmd>TodoQuickFix<CR>",
+        { desc = "TODO-Liste" })
+
+      vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>",
+        { desc = "TODOs durchsuchen" })
+    end,
+  },
+
+--
+-- PLUGINS END
+--
+
 })
 
 
