@@ -489,6 +489,9 @@ for i = 1, 9 do
 end
 
 
+-- Close the terminal with esc
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+
 -- ============================================
 --
 -- ============================================
